@@ -1,3 +1,11 @@
+@import "@fontsource/plus-jakarta-sans/latin-500.css";
+@import "@fontsource/plus-jakarta-sans/latin-ext-500.css";
+@import "@fontsource/plus-jakarta-sans/latin-600.css";
+@import "@fontsource/plus-jakarta-sans/latin-ext-600.css";
+@import "@fontsource/plus-jakarta-sans/latin-700.css";
+@import "@fontsource/plus-jakarta-sans/latin-ext-700.css";
+@import "@fontsource/plus-jakarta-sans/latin-800.css";
+@import "@fontsource/plus-jakarta-sans/latin-ext-800.css";
 /* JetDrop design system — mobile-first. 70% travel-deal platform, 30% private-aviation luxury. */
 :root {
   --navy: #101D2B; --navy-2: #172a3f; --ivory: #F8F6F1; --gold: #C7A76B; --gold-deep: #8d6f3a;

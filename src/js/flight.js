@@ -1,3 +1,6 @@
+import './data.js';
+import './ui.js';
+
 (function () {
   const { $, esc } = JD;
   document.addEventListener('DOMContentLoaded', () => {

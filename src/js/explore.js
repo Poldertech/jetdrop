@@ -1,3 +1,6 @@
+import './data.js';
+import './ui.js';
+
 (function () {
   const { $, $$ } = JD;
   const MAX = 20000;
