@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Explore Empty-Leg Flights Across Europe — JetDrop</title>
+<meta name="description" content="Search discounted private jet empty-leg flights across Europe by airport, date, aircraft and whole-aircraft price. Sample listings shown.">
+<meta name="theme-color" content="#101D2B">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body data-page="explore">
+<a class="skip" href="#main">Skip to content</a>
+<header id="site-header"></header>
+<main id="main">
+<div class="container">
+  <div class="page-head">
+    <span class="eyebrow">Explore flights</span>
+    <h1>Where could you fly private this weekend?</h1>
+    <p class="lead">Filter by airport, budget and aircraft. Prices are for the <b>whole aircraft</b>. All listings below are demonstration samples until real inventory is connected.</p>
+  </div>
+  <div class="explore">
+    <form class="filters collapsed" id="filters" aria-label="Flight filters" novalidate>
+      <div class="filters-head"><h2>Filters</h2><button type="button" class="btn-text" id="reset">Reset all</button></div>
+      <button type="button" class="btn btn-ghost btn-sm filters-toggle" id="ftoggle" aria-expanded="false" aria-controls="fbody">Show filters</button>
+      <div class="filters-body" id="fbody">
+        <div class="field"><label for="f-from">Departure airport</label><input id="f-from" type="text" list="airports" placeholder="Any airport" autocomplete="off"></div>
+        <div class="field"><label for="f-radius">Include nearby airports</label>
+          <select id="f-radius"><option value="0">Exact airport only</option><option value="50">Within 50 km</option><option value="100">Within 100 km</option><option value="250">Within 250 km</option><option value="500">Within 500 km</option></select></div>
+        <div class="field"><label for="f-to">Destination</label><input id="f-to" type="text" list="airports" placeholder="Anywhere" autocomplete="off"></div>
+        <div class="row2">
+          <div class="field"><label for="f-d1">From date</label><input id="f-d1" type="date"></div>
+          <div class="field"><label for="f-d2">To date</label><input id="f-d2" type="date"></div>
+        </div>
+        <div class="field"><label for="f-max">Max whole-aircraft price: <span class="range-val" id="f-maxv">Any</span></label>
+          <input id="f-max" type="range" min="2000" max="20000" step="500" value="20000" aria-describedby="f-maxh"><p class="hint" id="f-maxh">Slide to the far right for no limit.</p></div>
+        <div class="field"><label for="f-cat">Aircraft category</label><select id="f-cat"><option value="">Any category</option></select></div>
+        <div class="field"><label for="f-seats">Passenger capacity</label>
+          <select id="f-seats"><option value="0">Any</option><option value="4">4 or more</option><option value="6">6 or more</option><option value="8">8 or more</option></select></div>
+        <a class="btn btn-ghost btn-sm" href="alerts.html" id="alert-link">Turn these filters into an alert</a>
+      </div>
+    </form>
+    <section aria-label="Results">
+      <div class="results-bar">
+        <p id="count" role="status" aria-live="polite">Loading flights…</p>
+        <div class="sort"><label for="sort">Sort by</label>
+          <select id="sort"><option value="price">Lowest price</option><option value="date">Earliest departure</option><option value="recent">Most recently listed</option></select></div>
+      </div>
+      <div class="grid cards" id="results" aria-busy="true"></div>
+    </section>
+  </div>
+</div>
+</main>
+<footer id="site-footer"></footer>
+<datalist id="airports"></datalist>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/ui.js"></script>
+<script src="assets/js/explore.js"></script>
+</body>
+</html>

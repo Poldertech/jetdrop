@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Log In — JetDrop</title>
+<meta name="description" content="Log in to manage your JetDrop alerts. Accounts are not yet available.">
+<meta name="theme-color" content="#101D2B">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body data-page="login">
+<a class="skip" href="#main">Skip to content</a>
+<header id="site-header"></header>
+<main id="main">
+<div class="container"><div class="page-head"><h1>Log in</h1></div>
+<form class="form-card" id="login-form" novalidate style="margin-bottom:80px">
+ <div class="notice dev small"><b>Accounts aren’t live yet.</b> Future integration: Supabase Auth (email magic link).</div>
+ <div class="field"><label for="l-email">Email</label><input id="l-email" type="email" autocomplete="email"></div>
+ <button class="btn btn-primary" type="submit">Email me a login link</button><div id="l-out" tabindex="-1" hidden></div>
+ <p class="small muted" style="margin:0">New here? <a href="alerts.html">Create a free flight alert</a>.</p></form></div>
+<script>document.addEventListener('DOMContentLoaded',()=>{const f=document.getElementById('login-form');f.addEventListener('submit',e=>{e.preventDefault();const m=document.getElementById('l-email');if(!JD.setError(m,JD.isEmail(m.value)?'':'Enter a valid email address.')){m.focus();return}const o=document.getElementById('l-out');o.innerHTML='<div class="demo-result" role="status"><strong>Demonstration mode — no email was sent.</strong><p>Login is not connected yet.</p></div>';o.hidden=false;});});</script>
+</main>
+<footer id="site-footer"></footer>
+<datalist id="airports"></datalist>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/ui.js"></script>
+</body>
+</html>

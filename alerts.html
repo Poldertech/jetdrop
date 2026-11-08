@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Create a Free Private Jet Flight Alert — JetDrop</title>
+<meta name="description" content="Choose your departure airports, nearby radius, destinations and maximum budget to get alerts for European empty-leg flights. Demonstration mode.">
+<meta name="theme-color" content="#101D2B">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body data-page="alerts">
+<a class="skip" href="#main">Skip to content</a>
+<header id="site-header"></header>
+<main id="main">
+<div class="container">
+  <div class="page-head">
+    <span class="eyebrow">Flight alerts</span>
+    <h1>The best empty-leg deals don’t wait.</h1>
+    <p class="lead">Set up your alert in under a minute. We’ll show you a summary before you sign up.</p>
+  </div>
+  <div class="alert-layout">
+    <form class="panel" id="alert-form" novalidate aria-label="Create a flight alert">
+      <div class="notice dev" role="note"><b>Demonstration mode.</b> Alerts aren’t connected to a backend yet, so submitting this form will not store anything or send emails.</div>
+
+      <fieldset class="group"><legend class="legend">1 · Departure airports</legend>
+        <div class="add-row"><input id="a-air" type="text" list="airports" placeholder="Search airport or city, then Add" autocomplete="off" aria-label="Departure airport"><button type="button" class="btn btn-primary" id="a-add">Add</button></div>
+        <div class="chips" id="a-chips" aria-live="polite"></div>
+        <div id="a-air-err"></div>
+      </fieldset>
+
+      <div class="field"><label for="a-radius">Nearby-airport search radius</label>
+        <select id="a-radius"><option value="0">Exact airports only</option><option value="50" selected>Within 50 km</option><option value="100">Within 100 km</option><option value="250">Within 250 km</option><option value="500">Within 500 km</option></select></div>
+
+      <fieldset class="group"><legend class="legend">2 · Where would you like to go?</legend>
+        <label class="check"><input type="checkbox" id="a-any" checked> <span>Anywhere — surprise me</span></label>
+        <div id="a-dest-wrap" hidden>
+          <div class="add-row"><input id="a-dest" type="text" list="airports" placeholder="Add a destination" autocomplete="off" aria-label="Destination"><button type="button" class="btn btn-primary" id="a-dadd">Add</button></div>
+          <div class="chips" id="a-dchips" style="margin-top:10px"></div>
+        </div>
+      </fieldset>
+
+      <div class="field"><label for="a-budget">3 · Maximum whole-aircraft budget: <span class="range-val" id="a-budgetv">Any</span></label>
+        <input id="a-budget" type="range" min="2000" max="20000" step="500" value="20000"><p class="hint">This is the price of the entire aircraft, not per person. Slide right for no limit.</p></div>
+
+      <fieldset class="group"><legend class="legend">4 · Travel dates</legend>
+        <div class="options cols">
+          <label class="opt"><input type="radio" name="dates" value="any" checked><span>Flexible<small>Any upcoming date</small></span></label>
+          <label class="opt"><input type="radio" name="dates" value="30"><span>Next 30 days<small>Rolling window</small></span></label>
+          <label class="opt"><input type="radio" name="dates" value="range"><span>Specific range<small>Pick dates</small></span></label>
+        </div>
+        <div class="row2" id="a-range" hidden><div class="field"><label for="a-d1">From</label><input id="a-d1" type="date"></div><div class="field"><label for="a-d2">To</label><input id="a-d2" type="date"></div></div>
+      </fieldset>
+
+      <fieldset class="group"><legend class="legend">5 · How often should we email you?</legend>
+        <div class="options cols">
+          <label class="opt"><input type="radio" name="freq" value="weekly" checked><span>Weekly digest<small>Included free</small></span></label>
+          <label class="opt"><input type="radio" name="freq" value="daily"><span>Daily summary <em class="badge">Plus</em><small>JetDrop Plus</small></span></label>
+          <label class="opt"><input type="radio" name="freq" value="instant"><span>Instant <em class="badge">Plus</em><small>JetDrop Plus</small></span></label>
+        </div>
+      </fieldset>
+
+      <div class="field"><label for="a-email">6 · Email address</label><input id="a-email" type="email" autocomplete="email" placeholder="you@example.com"></div>
+      <label class="check"><input type="checkbox" id="a-consent"> <span>I agree to receive JetDrop flight alerts and marketing emails, and can unsubscribe at any time. See the <a href="privacy.html">Privacy Policy</a>.</span></label>
+      <button class="btn btn-gold btn-lg" type="submit">Create My Flight Alert</button>
+      <div id="a-out" tabindex="-1" hidden></div>
+    </form>
+
+    <aside class="summary" aria-label="Alert summary">
+      <h2>Your alert summary</h2>
+      <dl id="a-sum"></dl>
+      <p class="small" style="margin:0">Receiving a matching flight is not guaranteed. Flights are not included in any JetDrop plan and are booked with the provider.</p>
+    </aside>
+  </div>
+</div>
+</main>
+<footer id="site-footer"></footer>
+<datalist id="airports"></datalist>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/ui.js"></script>
+<script src="assets/js/alerts.js"></script>
+</body>
+</html>

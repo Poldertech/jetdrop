@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JetDrop — Private jets. Unexpected prices.</title>
+<meta name="description" content="Discover discounted private jet empty-leg flights across Europe. Choose your airports, set your budget and get free alerts. JetDrop is an independent flight discovery service.">
+<meta property="og:title" content="JetDrop — Private jets. Unexpected prices.">
+<meta property="og:description" content="Discover extraordinary private jet deals across Europe.">
+<meta name="theme-color" content="#101D2B">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"JetDrop","description":"Independent discovery and alerts for European private jet empty-leg flights."}</script>
+</head>
+<body data-page="home">
+<a class="skip" href="#main">Skip to content</a>
+<header id="site-header"></header>
+<main id="main">
+
+<!-- HERO -->
+<section class="hero" aria-labelledby="hero-h">
+  <!-- Original illustrated golden-hour scene. Swap for licensed photography: see README "Photography". -->
+  <svg class="hero-art" viewBox="0 0 1600 900" preserveAspectRatio="xMaxYMid slice" role="img" aria-label="Illustration of a private jet on an airport apron at golden hour">
+    <defs>
+      <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#0b1521"/><stop offset=".35" stop-color="#1f3550"/><stop offset=".62" stop-color="#8b6a58"/><stop offset=".8" stop-color="#e7b273"/><stop offset="1" stop-color="#f6dfaa"/>
+      </linearGradient>
+      <radialGradient id="sun" cx="1120" cy="610" r="420" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fff2c9" stop-opacity=".95"/><stop offset=".25" stop-color="#ffd58f" stop-opacity=".5"/><stop offset="1" stop-color="#ffb866" stop-opacity="0"/></radialGradient>
+      <linearGradient id="apron" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3a3f4b"/><stop offset=".25" stop-color="#1b2431"/><stop offset="1" stop-color="#0b121b"/></linearGradient>
+      <linearGradient id="glow" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffd9a0" stop-opacity=".55"/><stop offset="1" stop-color="#ffd9a0" stop-opacity="0"/></linearGradient>
+      <linearGradient id="hull" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f4efe6"/><stop offset=".55" stop-color="#cfd3d8"/><stop offset="1" stop-color="#7d8794"/></linearGradient>
+    </defs>
+    <rect width="1600" height="900" fill="url(#sky)"/>
+    <rect width="1600" height="900" fill="url(#sun)"/>
+    <circle cx="1120" cy="612" r="46" fill="#fff4d3"/>
+    <!-- distant coastline + hills -->
+    <path d="M0 610 C160 580 260 596 380 584 C520 570 600 604 760 596 C900 590 980 574 1100 590 C1260 610 1400 580 1600 596 L1600 640 L0 640Z" fill="#33445a" opacity=".85"/>
+    <path d="M0 628 C220 606 420 622 640 612 C900 600 1180 626 1600 612 L1600 650 L0 650Z" fill="#1a2738"/>
+    <!-- sea hint -->
+    <rect y="636" width="1600" height="14" fill="#c98f5e" opacity=".35"/>
+    <!-- apron -->
+    <rect y="640" width="1600" height="260" fill="url(#apron)"/>
+    <rect y="640" width="1600" height="90" fill="url(#glow)"/>
+    <!-- runway edge light + markings in perspective -->
+    <path d="M0 700 L1600 676" stroke="#f3cf91" stroke-opacity=".5" stroke-width="2"/>
+    <g fill="#f3d9a6" opacity=".55"><rect x="40" y="716" width="150" height="6" rx="3" transform="rotate(-1.4 40 716)"/><rect x="330" y="712" width="150" height="6" rx="3" transform="rotate(-1.4 330 712)"/><rect x="620" y="708" width="150" height="6" rx="3" transform="rotate(-1.4 620 708)"/><rect x="910" y="704" width="150" height="6" rx="3" transform="rotate(-1.4 910 704)"/><rect x="1200" y="700" width="150" height="6" rx="3" transform="rotate(-1.4 1200 700)"/></g>
+    <!-- aircraft: nose right, rim-lit by the low sun -->
+    <g transform="translate(940 475) scale(3.2)">
+      <ellipse cx="100" cy="53" rx="92" ry="3.2" fill="#000" opacity=".4" transform="translate(0 4)"/>
+      <path d="M24 33 L11 7 L30 7 L52 27Z" fill="url(#hull)"/>
+      <path d="M11 7 L30 7" stroke="#ffe3b0" stroke-width=".8"/>
+      <path d="M92 36 L128 36 L99 53 L82 53Z" fill="#aab1bb"/>
+      <path d="M92 36 L128 36" stroke="#ffe3b0" stroke-width=".7"/>
+      <path d="M12 31 L40 24.5 L150 22.5 C173 22.5 188 30 191 33.5 C188 37 173 41 150 41 L40 41 C24 41 14 37 12 31Z" fill="url(#hull)"/>
+      <path d="M40 24.5 L150 22.5 C173 22.5 188 30 191 33.5" fill="none" stroke="#ffe3b0" stroke-width="1"/>
+      <path d="M40 36.6 L170 35.6" stroke="#C7A76B" stroke-width="1.1"/>
+      <path d="M150 24.6 C165 24.8 176 28 181 31.4 L152 31.4Z" fill="#14202e"/>
+      <g fill="#14202e"><rect x="62" y="27" width="7" height="4.4" rx="1.6"/><rect x="74" y="27" width="7" height="4.4" rx="1.6"/><rect x="86" y="27" width="7" height="4.4" rx="1.6"/><rect x="98" y="27" width="7" height="4.4" rx="1.6"/><rect x="110" y="27" width="7" height="4.4" rx="1.6"/><rect x="122" y="27" width="7" height="4.4" rx="1.6"/></g>
+      <rect x="36" y="20" width="36" height="9" rx="4.5" fill="#bfc5cd"/><rect x="36" y="20" width="36" height="2" rx="1" fill="#ffe3b0"/>
+      <ellipse cx="36.5" cy="24.5" rx="2" ry="4.3" fill="#2a3340"/>
+      <!-- landing gear -->
+      <rect x="146" y="40" width="2.2" height="9" fill="#2a3340"/><circle cx="147" cy="51.2" r="2.6" fill="#10161e"/>
+      <rect x="62" y="40" width="2.2" height="9" fill="#2a3340"/><circle cx="60.5" cy="51.2" r="2.6" fill="#10161e"/><circle cx="66" cy="51.2" r="2.6" fill="#10161e"/>
+    </g>
+    <!-- reflection -->
+    <g opacity=".14" transform="translate(940 687) scale(3.2 -.9)"><path d="M12 31 L40 24.5 L150 22.5 C173 22.5 188 30 191 33.5 C188 37 173 41 150 41 L40 41 C24 41 14 37 12 31Z" fill="#ffe3b0"/></g>
+    <!-- a few distant apron lights -->
+    <g fill="#ffd9a0"><circle cx="90" cy="655" r="2"/><circle cx="240" cy="652" r="2"/><circle cx="1480" cy="650" r="2"/><circle cx="1360" cy="652" r="2"/></g>
+  </svg>
+
+  <div class="container hero-inner">
+    <p class="hero-tag">Discover extraordinary private jet deals across Europe.</p>
+    <h1 id="hero-h">Private jets. <em>Unexpected prices.</em></h1>
+    <p class="lead">Discover discounted empty-leg flights across Europe. Choose your departure airports, set your budget, and get alerted when an extraordinary deal appears.</p>
+    <div class="hero-ctas">
+      <a class="btn btn-gold btn-lg" href="explore.html">Explore Empty Legs</a>
+      <a class="btn btn-light btn-lg" href="alerts.html">Get Free Flight Alerts</a>
+    </div>
+
+    <form class="search" id="hero-search" action="explore.html" method="get" aria-label="Search empty-leg flights" novalidate>
+      <p class="search-title">Where could you fly private this weekend?</p>
+      <div class="search-grid">
+        <div class="field"><label for="s-from">Departing from</label><input id="s-from" name="from" type="text" list="airports" placeholder="Airport or city" autocomplete="off"></div>
+        <div class="field"><label for="s-to">Destination</label><input id="s-to" name="to" type="text" list="airports" placeholder="Anywhere" autocomplete="off"></div>
+        <div class="field"><label for="s-date">Departure date</label><input id="s-date" name="date" type="date"></div>
+        <div class="field"><label for="s-max">Max aircraft price</label>
+          <select id="s-max" name="max"><option value="">Any budget</option><option value="5000">Up to €5,000</option><option value="8000">Up to €8,000</option><option value="12000">Up to €12,000</option><option value="20000">Up to €20,000</option></select></div>
+        <button class="btn btn-primary" type="submit">Search</button>
+      </div>
+      <div class="search-opts">
+        <label class="check inline"><input type="checkbox" name="nearby" value="1" checked> Include nearby airports</label>
+        <label class="check inline"><input type="checkbox" name="flex" value="1"> Flexible dates (±3 days)</label>
+      </div>
+    </form>
+  </div>
+</section>
+
+<div class="container"><div class="trust" role="list">
+  <span role="listitem"><svg viewBox="0 0 24 24"><use href="#i-shield"/></svg>Independent discovery — we don’t operate aircraft</span>
+  <span role="listitem"><svg viewBox="0 0 24 24"><use href="#i-link"/></svg>Every listing links to its original provider</span>
+  <span role="listitem"><svg viewBox="0 0 24 24"><use href="#i-wallet"/></svg>Whole-aircraft prices, shown up front</span>
+</div></div>
+
+<!-- FEATURED -->
+<section class="section bg-white" aria-labelledby="feat-h" id="deals">
+  <div class="container">
+    <div class="sec-head split">
+      <div><span class="eyebrow">Featured empty legs · sample listings</span>
+      <h2 id="feat-h">Your next private jet adventure could cost less than you think.</h2></div>
+      <a class="link-arrow" href="explore.html">See all flights <svg viewBox="0 0 24 24"><path d="M5 12h14m-5-5 5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </div>
+    <div class="grid cards" id="featured"></div>
+    <p class="small muted" style="margin-top:24px">These are clearly labelled demonstration listings. JetDrop does not yet show live inventory, and no discounts or operator partnerships are implied. Prices are for the whole aircraft.</p>
+  </div>
+</section>
+
+<!-- DESTINATIONS -->
+<section class="section" aria-labelledby="dest-h">
+  <div class="container">
+    <div class="sec-head"><span class="eyebrow">Unexpected destinations</span><h2 id="dest-h">Your next extraordinary journey starts here.</h2>
+      <p class="lead">Pick a place and see which sample routes land there. With real data connected, this becomes your shortcut to what’s flying right now.</p></div>
+    <div class="grid dest-grid" id="dests"></div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section bg-white" id="how-it-works" aria-labelledby="how-h">
+  <div class="container">
+    <div class="sec-head center" style="margin-inline:auto"><span class="eyebrow">How JetDrop works</span><h2 id="how-h">Private aviation, a little more within reach.</h2></div>
+    <div class="grid steps">
+      <div class="step reveal"><span class="num">1</span><div class="ico"><svg viewBox="0 0 24 24"><use href="#i-search"/></svg></div><h3>Discover</h3><p>Explore discounted private jet empty-leg flights across Europe.</p></div>
+      <div class="step reveal"><span class="num">2</span><div class="ico"><svg viewBox="0 0 24 24"><use href="#i-bell"/></svg></div><h3>Get Notified</h3><p>Choose your airports, destinations and budget. Receive alerts when relevant opportunities appear.</p></div>
+      <div class="step reveal"><span class="num">3</span><div class="ico"><svg viewBox="0 0 24 24"><use href="#i-jet"/></svg></div><h3>Fly Private</h3><p>Check availability and book directly with the aircraft operator or authorized booking provider.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- EMPTY LEGS -->
+<section class="section bg-navy" aria-labelledby="el-h">
+  <div class="container explain">
+    <div>
+      <span class="eyebrow">What are empty-leg flights?</span>
+      <h2 id="el-h">The jet has to get there anyway.</h2>
+      <p class="lead" style="margin-bottom:24px">Private jets sometimes need to fly without passengers to reposition for their next journey. These flights are called empty legs. Operators may offer them at reduced prices, creating opportunities to experience private aviation for less.</p>
+      <ul class="ticks">
+        <li><svg viewBox="0 0 24 24"><use href="#i-check"/></svg>Empty legs are usually one-way — plan your return separately.</li>
+        <li><svg viewBox="0 0 24 24"><use href="#i-check"/></svg>They’re subject to schedule changes or cancellation by the operator.</li>
+        <li><svg viewBox="0 0 24 24"><use href="#i-check"/></svg>The price is for the whole aircraft, not a seat.</li>
+      </ul>
+      <a class="btn btn-gold" href="empty-legs.html">Learn More</a>
+    </div>
+    <figure class="route-art" style="margin:0">
+      <svg viewBox="0 0 520 300" role="img" aria-labelledby="ra-t"><title id="ra-t">Diagram: a jet flies a charter with passengers from A to B, then repositions empty from B to C</title>
+        <path d="M70 220 C160 120 250 120 300 160" fill="none" stroke="#C7A76B" stroke-width="3"/>
+        <path d="M300 160 C360 205 420 150 455 78" fill="none" stroke="#C7A76B" stroke-width="3" stroke-dasharray="3 9" stroke-linecap="round"/>
+        <g fill="#101D2B" stroke="#C7A76B" stroke-width="3"><circle cx="70" cy="220" r="11"/><circle cx="300" cy="160" r="11"/><circle cx="455" cy="78" r="11"/></g>
+        <g font-family="Plus Jakarta Sans, system-ui, sans-serif" font-weight="700" font-size="15" fill="#fff"><text x="70" y="252" text-anchor="middle">A</text><text x="300" y="196" text-anchor="middle">B</text><text x="455" y="58" text-anchor="middle">C</text></g>
+        <g font-family="Plus Jakarta Sans, system-ui, sans-serif" font-size="13" fill="#c9d3dd"><text x="108" y="124">Charter with passengers</text><text x="338" y="232">Empty leg: repositioning</text></g></svg>
+      <figcaption>Illustrative diagram. The dotted leg is the flight an operator may discount.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="section" aria-labelledby="why-h">
+  <div class="container">
+    <div class="sec-head"><span class="eyebrow">Why JetDrop?</span><h2 id="why-h">Unexpected destinations. Unexpected prices.</h2></div>
+    <div class="grid features">
+      <div class="feature reveal"><svg viewBox="0 0 24 24"><use href="#i-jet"/></svg><h3>Opportunities across Europe</h3><p>Discover private jet opportunities from London to Lisbon and Athens to Copenhagen.</p></div>
+      <div class="feature reveal"><svg viewBox="0 0 24 24"><use href="#i-pin"/></svg><h3>Nearby airports, covered</h3><p>Search multiple nearby airports at once — Luton, Farnborough and Biggin Hill together.</p></div>
+      <div class="feature reveal"><svg viewBox="0 0 24 24"><use href="#i-wallet"/></svg><h3>Set your maximum budget</h3><p>Only hear about flights within what you’re willing to spend.</p></div>
+      <div class="feature reveal"><svg viewBox="0 0 24 24"><use href="#i-bell"/></svg><h3>Personalized alerts</h3><p>Tell us where you’d fly from and we’ll let you know when a match appears.</p></div>
+      <div class="feature reveal"><svg viewBox="0 0 24 24"><use href="#i-shield"/></svg><h3>Transparent pricing</h3><p>Whole-aircraft prices, with any per-person figure clearly labelled as an illustration.</p></div>
+      <div class="feature reveal"><svg viewBox="0 0 24 24"><use href="#i-link"/></svg><h3>Direct links to providers</h3><p>No need to search dozens of aviation websites. We point you to the original listing.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- MEMBERSHIP TEASER -->
+<section class="section-tight bg-white">
+  <div class="container grid" style="grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));align-items:center;gap:28px">
+    <div><span class="eyebrow">Membership</span><h2 style="font-size:clamp(1.6rem,3.4vw,2.3rem)">Start free. Go further with Plus.</h2>
+      <p class="muted">Free Explorer is €0 with a weekly digest. JetDrop Plus (€9.99/month, not yet available) adds instant, personalised alerts. Flights are never included in membership.</p></div>
+    <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:flex-start"><a class="btn btn-primary" href="membership.html">Compare memberships</a></div>
+  </div>
+</section>
+
+<!-- SIGNUP -->
+<section class="section" id="signup" aria-labelledby="su-h">
+  <div class="container">
+    <div class="signup">
+      <div><span class="eyebrow">Free flight alerts</span><h2 id="su-h">The best empty-leg deals don’t wait. Neither should you.</h2>
+        <p>Tell us where you’d like to fly from and what you’re willing to spend. We’ll help you discover opportunities that match.</p>
+        <p class="small">No guarantee that a matching flight will appear. Unsubscribe any time.</p></div>
+      <div>
+        <form id="quick-signup" novalidate>
+          <div class="field"><label for="q-email">Email address</label><input id="q-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required></div>
+          <div class="field"><label for="q-air">Preferred departure airport</label><input id="q-air" name="airports" type="text" list="airports" placeholder="e.g. London — Luton (LTN)" autocomplete="off"><p class="hint">Add more airports and nearby-airport matching on the full alerts page.</p></div>
+          <div class="field"><label for="q-budget">Maximum aircraft budget</label>
+            <select id="q-budget" name="budget"><option value="">No maximum</option><option value="5000">€5,000</option><option value="8000">€8,000</option><option value="12000">€12,000</option><option value="20000">€20,000</option></select></div>
+          <label class="check"><input type="checkbox" name="consent" id="q-consent"> <span>I agree to receive JetDrop flight alerts and occasional marketing emails by email, and can unsubscribe at any time. See the <a href="privacy.html">Privacy Policy</a>.</span></label>
+          <button class="btn btn-gold btn-lg btn-block" type="submit">Get Free Alerts</button>
+        </form>
+        <div class="signup-out" tabindex="-1" hidden></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer id="site-footer"></footer>
+
+<datalist id="airports"></datalist>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="m16 16 4.5 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="i-bell" viewBox="0 0 24 24"><path d="M6 17V11a6 6 0 1 1 12 0v6l1.5 2h-15z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M10 21h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="i-jet" viewBox="0 0 24 24"><path d="M21 15.5v-1.7l-8-5V3.5a1.5 1.5 0 0 0-3 0v5.3l-8 5v1.7l8-2.3v4.6l-2 1.5V22l3.5-1 3.5 1v-1.2l-2-1.5v-4.6z" fill="currentColor"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 5 6v5.5c0 4.3 2.9 7.6 7 9.5 4.1-1.9 7-5.2 7-9.5V6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m9 12 2.2 2.2L15.2 10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-link" viewBox="0 0 24 24"><path d="M14 4h6v6m0-6-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-wallet" viewBox="0 0 24 24"><path d="M4 7.5A2.5 2.5 0 0 1 6.5 5H18v3M4 7.5V17a2 2 0 0 0 2 2h13a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1H6.5A2.5 2.5 0 0 1 4 7.5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="16.5" cy="13.5" r="1.3" fill="currentColor"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="9.5" r="2.5" fill="currentColor"/></symbol>
+</svg>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/ui.js"></script>
+<script src="assets/js/home.js"></script>
+</body>
+</html>

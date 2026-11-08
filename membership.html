@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Membership — Free Explorer and JetDrop Plus</title>
+<meta name="description" content="Compare JetDrop Free Explorer (€0) and JetDrop Plus (€9.99/month). Membership covers alerts and discovery tools; flights are not included.">
+<meta name="theme-color" content="#101D2B">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body data-page="membership">
+<a class="skip" href="#main">Skip to content</a>
+<header id="site-header"></header>
+<main id="main">
+<div class="container">
+  <div class="page-head center"><span class="eyebrow">Membership</span><h1>Private aviation, a little more within reach.</h1>
+  <p class="lead">Start free. Add Plus if you want faster, more personal alerts. Membership pays for discovery tools — it never includes a flight.</p></div>
+  <div class="plans">
+    <section class="plan" aria-labelledby="p-free"><span class="tier">Free Explorer</span><h2 id="p-free" class="sr-only">Free Explorer</h2>
+      <p class="cost">€0</p><p class="muted">Free account, no card required.</p>
+      <ul class="ticks"><li><svg viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Browse advertised empty-leg opportunities</li><li><svg viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Weekly flight-deal digest</li><li><svg viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Basic airport search</li><li><svg viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Free account</li></ul>
+      <a class="btn btn-primary btn-lg" href="alerts.html">Get Free Alerts</a></section>
+    <section class="plan plus" aria-labelledby="p-plus"><span class="tier">JetDrop Plus</span><h2 id="p-plus" class="sr-only">JetDrop Plus</h2>
+      <p class="cost">€9.99<small> / month</small></p><p>Billed monthly. Cancel any time.</p>
+      <ul class="ticks"><li><svg viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Personalized instant flight alerts</li><li><svg viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Multiple saved searches</li><li><svg viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Nearby-airport matching</li><li><svg viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Price-drop notifications</li><li><svg viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Advanced budget and destination filters</li></ul>
+      <button class="btn btn-gold btn-lg" type="button" disabled aria-disabled="true" aria-describedby="plus-note">Plus isn’t available yet</button>
+      <p class="small" id="plus-note" style="margin:14px 0 0">Payments are not active. <a href="alerts.html?plan=plus" style="color:var(--gold)">Create a free alert</a> and we’ll be able to tell you when Plus opens.</p></section>
+  </div>
+
+  <div class="section-tight grid" style="grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:28px">
+    <div><h2 style="font-size:1.6rem">What you should know before subscribing</h2>
+      <ul class="disclosures">
+        <li><b>Monthly recurring billing.</b> JetDrop Plus would renew every month at €9.99 until you cancel.</li>
+        <li><b>Cancellation.</b> You will be able to cancel at any time from your account; access continues to the end of the paid period. Full terms are in the <a href="subscription-policy.html">Subscription &amp; Cancellation Policy</a>.</li>
+        <li><b>What it includes.</b> Alert and search features listed above. Nothing else.</li>
+        <li><b>Flights are not included.</b> Every flight is booked and paid for separately with the aircraft operator or authorized booking provider.</li>
+        <li><b>No guarantee of matches.</b> Receiving a matching flight is not guaranteed — empty-leg availability varies.</li></ul></div>
+    <div class="notice dev" style="align-self:start"><b>Developer note — future integration.</b><br>Checkout is intentionally not connected. Payments will only be switched on once <b>Stripe</b> and the subscription backend (<b>Supabase</b> accounts, webhooks, cancellation) are connected and tested end to end.</div>
+  </div>
+</div>
+</main>
+<footer id="site-footer"></footer>
+<datalist id="airports"></datalist>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/ui.js"></script>
+</body>
+</html>

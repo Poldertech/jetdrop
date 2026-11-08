@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact JetDrop</title>
+<meta name="description" content="Get in touch with the JetDrop team.">
+<meta name="theme-color" content="#101D2B">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body data-page="contact">
+<a class="skip" href="#main">Skip to content</a>
+<header id="site-header"></header>
+<main id="main">
+<div class="container"><div class="page-head"><span class="eyebrow">Contact</span><h1>Say hello.</h1><p class="lead">Questions, press or partnership enquiries about JetDrop.</p></div>
+<div class="two-col" style="padding-bottom:80px">
+<form class="form-card" id="contact-form" novalidate>
+ <div class="notice dev small">Demonstration form — messages are not sent yet. Future integration: email via Resend or Brevo / an n8n workflow.</div>
+ <div class="field"><label for="c-name">Name</label><input id="c-name" type="text" autocomplete="name"></div>
+ <div class="field"><label for="c-email">Email</label><input id="c-email" type="email" autocomplete="email"></div>
+ <div class="field"><label for="c-msg">Message</label><textarea id="c-msg"></textarea></div>
+ <button class="btn btn-primary" type="submit">Send message</button><div id="c-out" tabindex="-1" hidden></div>
+</form>
+<div class="prose"><h2 style="margin-top:0">Other ways to reach us</h2><p><b>Email:</b> [placeholder — add contact address]</p><p><b>Company details:</b> [placeholder — registered name, address and number to be added]</p>
+<p class="small muted">Looking for a flight? JetDrop doesn’t operate aircraft — the provider named on each listing handles bookings.</p></div></div></div>
+<script>document.addEventListener('DOMContentLoaded',()=>{const f=document.getElementById('contact-form');f.addEventListener('submit',e=>{e.preventDefault();let ok=true;const n=document.getElementById('c-name'),m=document.getElementById('c-email'),t=document.getElementById('c-msg');ok=JD.setError(n,n.value.trim()?'':'Please enter your name.')&&ok;ok=JD.setError(m,JD.isEmail(m.value)?'':'Enter a valid email address.')&&ok;ok=JD.setError(t,t.value.trim().length>4?'':'Please write a short message.')&&ok;if(!ok){f.querySelector('[aria-invalid=true]').focus();return}const o=document.getElementById('c-out');o.innerHTML='<div class="demo-result" role="status"><strong>Demonstration mode — nothing was sent.</strong><p>The contact form is not connected to an email service yet.</p></div>';o.hidden=false;});});</script>
+</main>
+<footer id="site-footer"></footer>
+<datalist id="airports"></datalist>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/ui.js"></script>
+</body>
+</html>

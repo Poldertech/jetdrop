@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Empty-Leg Flight Details — JetDrop</title>
+<meta name="description" content="Details for a private jet empty-leg flight: route, date, aircraft, whole-aircraft price, source and availability status. Sample listing.">
+<meta name="theme-color" content="#101D2B">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+<meta name="robots" content="noindex">
+</head>
+<body data-page="flight">
+<a class="skip" href="#main">Skip to content</a>
+<header id="site-header"></header>
+<main id="main">
+<div class="container" id="fd-root"><div class="page-head"><p class="muted">Loading flight…</p></div></div>
+<dialog id="redirect-dialog" aria-labelledby="rd-h"><div class="dialog-in">
+  <h2 id="rd-h">Demonstration listing</h2>
+  <p>This is a sample listing, so there is no provider page to open. With real inventory connected, this button sends you to the <b>original provider’s booking page</b> in a new tab, where you confirm availability and book directly.</p>
+  <p class="small muted">Future integration: authorised data-ingestion service → Supabase <code>empty_legs.provider_url</code>.</p>
+  <div class="dialog-actions"><button class="btn btn-primary" id="rd-close">Got it</button><a class="btn btn-ghost" href="alerts.html">Create an alert instead</a></div>
+</div></dialog>
+</main>
+<footer id="site-footer"></footer>
+<datalist id="airports"></datalist>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/ui.js"></script>
+<script src="assets/js/flight.js"></script>
+</body>
+</html>
